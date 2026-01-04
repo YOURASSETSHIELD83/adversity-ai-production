@@ -1,0 +1,8 @@
+
+{
+  "name": "Adversity Intelligence - Master Your Operations",
+  "description": "A high-performance landing page for Adversity Intelligence, featuring real-time AI voice interaction powered by Gemini Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

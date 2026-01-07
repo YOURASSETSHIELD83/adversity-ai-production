@@ -2,15 +2,16 @@
 import React from 'react';
 
 const About: React.FC = () => {
-  const leaders = [
+  const founder = {
+    name: "Timmy Roth",
+    role: "Founder",
+    bio: "Visionary behind the Adversity Intelligence framework, focused on architecting high-performance systems that solve the most complex operational constraints."
+  };
+
+  const team = [
     {
-      name: "Timmy Roth",
-      role: "Founder",
-      bio: "Visionary behind the Adversity Intelligence framework, focused on architecting high-performance systems that solve the most complex operational constraints."
-    },
-    {
-      name: "Julia Luenberger",
-      role: "Co-Founder",
+      name: "Julie Luenberger",
+      role: "Lead Project Manager",
       bio: "Lead strategist and integration specialist, ensuring every Adversity AI deployment aligns perfectly with client-specific growth objectives and efficiency goals."
     }
   ];
@@ -26,15 +27,29 @@ const About: React.FC = () => {
               Founded in <strong>Piqua, Ohio</strong>, Adversity Intelligence was born from the belief that modern business challenges aren't obstacles—they are opportunities to evolve.
             </p>
           </div>
-          <div className="lg:col-span-2 grid sm:grid-cols-2 gap-8">
-            {leaders.map((leader, idx) => (
-              <div key={idx} className="glass p-8 rounded-3xl border border-white/5 hover:border-indigo-500/20 transition-all">
-                <div className="w-12 h-1 bg-indigo-500 mb-6"></div>
-                <h3 className="text-2xl font-black mb-1">{leader.name}</h3>
-                <p className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">{leader.role}</p>
-                <p className="text-gray-400 text-sm leading-relaxed">{leader.bio}</p>
-              </div>
-            ))}
+          <div className="lg:col-span-2">
+            {/* Founder Section */}
+            <div className="glass p-8 rounded-3xl border border-white/5 hover:border-indigo-500/20 transition-all mb-8">
+              <div className="w-12 h-1 bg-indigo-500 mb-6"></div>
+              <h3 className="text-2xl font-black mb-1">{founder.name}</h3>
+              <p className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">{founder.role}</p>
+              <p className="text-gray-400 text-sm leading-relaxed">{founder.bio}</p>
+            </div>
+
+            {/* Meet the Team Section */}
+            <div className="mb-6">
+              <h3 className="text-2xl font-black tracking-tighter mb-4">Meet the Team</h3>
+            </div>
+            <div className="grid sm:grid-cols-1 gap-8">
+              {team.map((member, idx) => (
+                <div key={idx} className="glass p-8 rounded-3xl border border-white/5 hover:border-indigo-500/20 transition-all">
+                  <div className="w-12 h-1 bg-indigo-500 mb-6"></div>
+                  <h3 className="text-2xl font-black mb-1">{member.name}</h3>
+                  <p className="text-indigo-400 text-xs font-bold uppercase tracking-widest mb-4">{member.role}</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
